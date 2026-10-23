@@ -1,0 +1,224 @@
+html{
+  overscroll-behavior: none;
+}
+
+body{
+  width: 100%;
+  min-height: 100vh;
+  font-family: var(--font-primary);
+  color: var(--color-text-primary);
+}
+
+/* Navbar Styles */
+.navbar{
+  width: 100%;
+  display: flex;
+  flex: 1;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-lg) var(--spacing-xl);
+  background-color: var(--color-primary-1);
+  color: var(--color-text-primary);
+}
+
+.navbar__team-logo{
+  background-color: var(--color-text-primary);
+  padding: var(--spacing-md);
+  border-style: none;
+  border-radius: var(--radius-full);
+  color: var(--color-text-primary);
+}
+
+.navbar__home-link{
+  display: flex;
+  align-items: center;
+}
+
+.navbar__logo{
+  width: 80px;
+}
+
+.navbar__logo-heading{
+  font-size: var(--font-size-xl);
+  padding-left: var(--spacing-md);
+  padding-right: var(--spacing-2xl);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.navbar__list{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+  list-style: none;
+}
+
+.navbar__link{
+  padding: var(--spacing-md);
+  font-size: var(--font-size-base);
+  font-weight: 500;
+  color: inherit;
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+  transition: background-color 0.3s ease;
+}
+
+.navbar__link:hover{
+  background-color: var(--color-hover);
+}
+
+.navbar__button{
+  background-color: transparent;
+  border-style: none;
+  display: none;
+}
+
+/* Main Styles */
+.team{
+  width: 100%;
+  padding: var(--spacing-2xl);
+  background-image: url("../assets/images/Icerink_stock_photo.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+.team__title{
+  text-align: center;
+  font-size: var(--font-size-2xl);
+  padding-bottom: var(--spacing-2xl);
+}
+
+.team__grid{
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  column-count: 4;
+  gap: var(--spacing-xl);
+}
+
+.card{
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: #000000;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 47, 73, 1) 25%, rgba(255, 255, 255, 0) 100%);
+  border-radius: var(--radius-sm);
+  transition: 0.1s ease;
+}
+
+.card:hover {
+  transform: scale(1.1);
+}
+.card__number{
+  padding-left: var(--spacing-sm);
+  font-size: var(--font-size-xl);
+  font-family: var(--font-primary);
+  font-weight: 600;
+}
+
+.player__image{
+  width: 100%;
+  height: auto;
+}
+
+.player__info{
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--radius-sm);
+  background: #000000;
+  background: linear-gradient(0deg,rgba(0, 0, 0, 1) 40%, rgba(255, 255, 255, 0) 100%);
+  padding: var(--spacing-md);
+}
+
+.player__name{
+  font-size: clamp(var(--font-size-base), var(--font-size-lg), var(--font-size-2xl));
+  padding-bottom: var(--spacing-sm);
+  white-space: nowrap;
+}
+
+.player__stats{
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  font-size: var(--font-size-base);
+  font-weight: 600;
+}
+
+.flag{
+  width: 25px;
+}
+
+/* Footer Styles */
+.footer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-md);
+  background-color: var(--color-primary-1);
+}
+
+.footer__content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.footer__logo{
+  width: 50px;
+}
+
+.footer__disclaimer{
+  font-size: var(--font-size-sm);
+  text-align: center;
+}
+
+/* Tablet */
+@media screen and (max-width: 1200px) {
+  .navbar__list {
+    display: none;
+  }
+  .navbar__actions{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .navbar__button{
+    padding: var(--spacing-md);
+    display: inline;
+    border-radius: var(--radius-sm);
+    transition: background-color 0.3s ease;
+  }
+  .navbar__button:hover{
+  background-color: var(--color-hover);
+  }
+}
+
+/* Phone */
+@media screen and (max-width: 770px) {
+  .navbar__team-logo{
+    padding: var(--spacing-sm);
+  }
+  .navbar__logo{
+   width: 50px;
+  }
+  .navbar__logo-heading{
+    font-size: var(--font-size-md);
+  }
+  .team__title{
+    font-size: var(--font-size-lg);
+  }
+
+}
